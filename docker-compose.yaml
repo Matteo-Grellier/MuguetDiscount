@@ -12,9 +12,6 @@ services:
       - '3002:3002'
     expose:
       - '3002'
-    volumes:
-      - ./react-docker:/usr/src/app/react-docker
-      - /usr/src/app/react-docker/node_modules
   apicommands:
     image: mcr.microsoft.com/dotnet/core/aspnet:latest
     build:
