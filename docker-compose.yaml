@@ -1,41 +1,51 @@
 version: '3.4'
 services:
   front:
-    image: node:lts-alpine
+    build: ./front
     ports:
       - '3001:3001'
-    expose:
-      - '3001'
+    stdin_open: true
+    tty: true
   frontSSO:
-    image: node:lts-alpine
+    image: node:lts
     ports:
       - '3002:3002'
     expose:
       - '3002'
+    volumes:
+      - ./react-docker:/usr/src/app/react-docker
+      - /usr/src/app/react-docker/node_modules
   apicommands:
-    image: C#
+    image: mcr.microsoft.com/dotnet/core/aspnet:latest
+    build:
+      context: ./path_to_your_api_project
+      dockerfile: Dockerfile
     ports:
-      - '4001:4001'
-    expose:
-      - '4001'
+      - "4001:4001"
   apiuser:
-    image: C#
+    image: mcr.microsoft.com/dotnet/core/aspnet
     ports:
       - '4003:4003'
     expose:
       - '4003'
   dbuser:
-    image: postgre
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: dbuser
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: user
     ports:
-      - '4013:4013'
-    expose:
-      - '4013'
+      - "5002:5002"
   dbcommands:
-    image: postgre
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: dbcommands
+      POSTGRES_USER: command
+      POSTGRES_PASSWORD: command
     ports:
-      - '4011:4011'
-    expose:
-      - '4011'
+      - "5001:5001"
   busmailer:
     image: rabbitmq:3-management
     ports :
@@ -49,3 +59,6 @@ services:
     expose:
       - '4014'
 
+networks:
+  my_network:
+    driver: bridge
