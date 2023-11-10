@@ -1,28 +1,32 @@
 version: '3.4'
 services:
   front:
-    build: ./front
+    build:
+      context: ./front/mainfront
+      dockerfile: ./Dockerfile
     ports:
-      - '3001:3001'
+      - '3000:3000'
     stdin_open: true
     tty: true
-  frontSSO:
-    image: node:lts
+  frontsso:
+    build:
+      context: ./front/frontsso
+      dockerfile: ./Dockerfile
     ports:
-      - '3002:3002'
-    expose:
-      - '3002'
+      - '3001:3000'
+    stdin_open: true
+    tty: true
   apicommands:
     image: mcr.microsoft.com/dotnet/core/aspnet:latest
     build:
       context: ./path_to_your_api_project
       dockerfile: Dockerfile
     ports:
-      - "4001:4001"
+      - "4000:5000"
   apiuser:
     image: mcr.microsoft.com/dotnet/core/aspnet
     ports:
-      - '4003:4003'
+      - '4001:5000'
     expose:
       - '4003'
   dbuser:
@@ -33,7 +37,7 @@ services:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: user
     ports:
-      - "5002:5002"
+      - "5000:5432"
   dbcommands:
     image: postgres
     restart: always
@@ -42,20 +46,16 @@ services:
       POSTGRES_USER: command
       POSTGRES_PASSWORD: command
     ports:
-      - "5001:5001"
+      - "5001:5432"
   busmailer:
     image: rabbitmq:3-management
     ports :
-      - '4004:4004'
+      - '6000:5672'
     expose:
     - '4004'
   mailer:
     image: catatnight/postfix
     ports :
-      - '4014:4014'
+      - '6001:587'
     expose:
       - '4014'
-
-networks:
-  my_network:
-    driver: bridge
