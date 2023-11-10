@@ -1,0 +1,51 @@
+version: '3.4'
+services:
+  front:
+    image: node:lts-alpine
+    ports:
+      - '3001:3001'
+    expose:
+      - '3001'
+  frontSSO:
+    image: node:lts-alpine
+    ports:
+      - '3002:3002'
+    expose:
+      - '3002'
+  apicommands:
+    image: C#
+    ports:
+      - '4001:4001'
+    expose:
+      - '4001'
+  apiuser:
+    image: C#
+    ports:
+      - '4003:4003'
+    expose:
+      - '4003'
+  dbuser:
+    image: postgre
+    ports:
+      - '4013:4013'
+    expose:
+      - '4013'
+  dbcommands:
+    image: postgre
+    ports:
+      - '4011:4011'
+    expose:
+      - '4011'
+  busmailer:
+    image: rabbitmq:3-management
+    ports :
+      - '4004:4004'
+    expose:
+    - '4004'
+  mailer:
+    image: catatnight/postfix
+    ports :
+      - '4014:4014'
+    expose:
+      - '4014'
+
