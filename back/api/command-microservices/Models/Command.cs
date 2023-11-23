@@ -7,8 +7,8 @@ namespace command_microservices;
 
 public class Command
 {
-    [Key] public BigInteger ID { get; set; }
-    public BigInteger UserID { get; set; }
+    [Key] public int ID { get; set; }
+    public int UserID { get; set; }
     public int TotalPrice { get; set; }
-    public DateOnly Date { get; set; }
+    public string? Date { get; set; }
 }

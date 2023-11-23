@@ -11,7 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // builder.Services.AddDbContext<CommandDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 // builder.Services.AddScoped<IDataAccessProvider, DataAccessProvider>();
-builder.Services.AddDbContext<CommandDbContext>(option=> option.UseNpgsql(builder.Configuration.GetConnectionString("connection")));
+// builder.Services.AddDbContext<CommandDbContext>(option=> option.UseNpgsql(builder.Configuration.GetConnectionString("connection")));
+builder.Services.AddDbContext<CommandDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("postgresConnection")));
 
 var app = builder.Build();
 
