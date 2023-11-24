@@ -21,6 +21,10 @@
 	border-radius: 100%;
 }
 
+.icon:hover {
+	cursor: pointer;
+}
+
 .centerContainer {
 	display: flex;
 	flex-direction: column;
@@ -90,4 +94,10 @@
 	border-color: #fff;
 	background-color: white;
 	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.login:hover {
+	cursor: pointer;
 }

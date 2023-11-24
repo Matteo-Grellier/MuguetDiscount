@@ -2,25 +2,38 @@
 import React from 'react';
 import '../css/navbar.css';
 import SearchBar from './searchbar';
+import { useNavigate } from "react-router-dom"
+import { useAuth0 } from "@auth0/auth0-react";
+
 function Navbar() {
+	const { user, isAuthenticated } = useAuth0();
+
+	let userIcon;
+	let navigate = useNavigate();
 	function click(params) {
-		console.log("hasclicked")
+		let path = "/cart";
+		navigate(path);
 	}
+	function redirectToHome() {
+		let path = "/";
+		navigate(path);
+	}
+	function redirectToLoginPage() {
+		let path = "/login";
+		navigate(path);
+	}
+	if (isAuthenticated) {
+		userIcon = user.picture;
+	}
+
 	return (
 		<nav className="navbar">
-			<div className='icon'>
+			<div className='icon' onClick={redirectToHome}>
 
 			</div>
 			<div className='centerContainer'>
 				<div className='searchbar'>
 					<SearchBar size="lg" />
-				</div>
-				<div className='categories'>
-					<a href='#' className='hover-underline-animation'>Informatique</a>
-					<a href='#' className='hover-underline-animation'>Electroménager</a>
-					<a href='#' className='hover-underline-animation'>Muguet</a>
-					<a href='#' className='hover-underline-animation'>Sport</a>
-					<a href='#' className='hover-underline-animation'>jardin</a>
 				</div>
 			</div>
 
@@ -28,12 +41,15 @@ function Navbar() {
 				<div className='cart' onClick={click}>
 
 				</div>
-				<div className='login'>
-
+				<div className='login' onClick={redirectToLoginPage}>
+					{isAuthenticated ?
+						< img src={userIcon} alt='' style={{ objectFit: 'cover', borderRadius: '40px', overflow: 'hidden' }} />
+						:
+						< img alt='no icon' style={{ color: 'black' }} />
+					}
 				</div>
-
 			</div>
-		</nav>
+		</nav >
 	);
 }
 
