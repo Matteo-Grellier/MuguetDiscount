@@ -9,6 +9,6 @@ public class Command
 {
     [Key] public int ID { get; set; }
     public int UserID { get; set; }
-    public int TotalPrice { get; set; }
-    public string? Date { get; set; }
+    public float TotalPrice { get; set; }
+    public string Date { get; set; }
 }
