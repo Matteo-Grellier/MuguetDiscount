@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "MN/Kw7AH5nvGUjfjETsqmN1Ej261k/jdZFB7yhGHZwU=",
+  "Source": "command-microservices",
+  "BasePath": "_content/command-microservices",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

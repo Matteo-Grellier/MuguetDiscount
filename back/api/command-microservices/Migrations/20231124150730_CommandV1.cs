@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Numerics;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -7,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace command_microservices.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class CommandV1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,10 +15,10 @@ namespace command_microservices.Migrations
                 name: "Commands",
                 columns: table => new
                 {
-                    ID = table.Column<BigInteger>(type: "numeric", nullable: false),
-                    UserID = table.Column<BigInteger>(type: "numeric", nullable: false),
-                    TotalPrice = table.Column<int>(type: "integer", nullable: false),
-                    Date = table.Column<DateOnly>(type: "date", nullable: false)
+                    ID = table.Column<string>(type: "text", nullable: false),
+                    UserID = table.Column<string>(type: "text", nullable: false),
+                    TotalPrice = table.Column<float>(type: "real", nullable: false),
+                    Date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -1,0 +1,17 @@
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\command-microservices.exe
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\appsettings.Development.json
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\appsettings.json
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\command-microservices.dll
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\command-microservices.runtimeconfig.json
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\command-microservices.pdb
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\Microsoft.EntityFrameworkCore.dll
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\Microsoft.OpenApi.dll
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\Npgsql.dll
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\lewis\Documents\GitHub\MuguetDiscount\back\api\command-microservices\published\command-microservices.deps.json

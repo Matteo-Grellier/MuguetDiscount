@@ -16,19 +16,6 @@ services:
       - '3001:3000'
     stdin_open: true
     tty: true
-  apicommands:
-    image: mcr.microsoft.com/dotnet/core/aspnet:latest
-    build:
-      context: ./path_to_your_api_project
-      dockerfile: Dockerfile
-    ports:
-      - "4000:5000"
-  apiuser:
-    image: mcr.microsoft.com/dotnet/core/aspnet
-    ports:
-      - '4001:5000'
-    expose:
-      - '4003'
   dbuser:
     image: postgres
     restart: always
@@ -47,6 +34,19 @@ services:
       POSTGRES_PASSWORD: command
     ports:
       - "5001:5432"
+    volumes:
+      - ./back/data:/var/lib/postresql/data
+  apicommands:
+    build:
+      context: ./back/api/command-microservices
+      dockerfile: Dockerfile
+    ports:
+      - "4000:5000"
+  # apiuser:
+  #   ports:
+  #     - '4001:5000'
+  #   expose:
+  #     - '4003'
   busmailer:
     image: rabbitmq:3-management
     ports :
@@ -59,3 +59,5 @@ services:
       - '6001:587'
     expose:
       - '4014'
+volumes:
+  pgdata:

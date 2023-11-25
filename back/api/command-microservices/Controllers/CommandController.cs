@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace command_microservices;
 
@@ -40,13 +41,15 @@ public class CommandController : ControllerBase
 
     // POST api/<CommandController>
     [HttpPost]
-    public IActionResult Post([FromBody] Command model )
+    public IActionResult Post([FromBody] Command model)
     {
-        var commandExist = _commands.Commands.Any(e => e.ID == model.ID);
-        if (commandExist == true)
+        string guid = Guid.NewGuid().ToString();
+        while (_commands.Commands.Any(e => e.ID == guid))
         {
-            return Ok(new { Message = "A command already exist with this ID" });
+            guid = Guid.NewGuid().ToString();
         }
+        model.ID = guid;
+        model.Date = DateTime.UtcNow;
 
         _commands.Add(model);
         _commands.SaveChanges();

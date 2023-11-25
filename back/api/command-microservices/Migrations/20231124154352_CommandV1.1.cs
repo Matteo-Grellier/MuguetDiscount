@@ -5,7 +5,7 @@
 namespace command_microservices.Migrations
 {
     /// <inheritdoc />
-    public partial class initial2 : Migration
+    public partial class CommandV11 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
