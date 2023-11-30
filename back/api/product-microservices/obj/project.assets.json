@@ -1475,37 +1475,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lewis\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/matteog/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lewis\\Documents\\GitHub\\MuguetDiscount\\back\\api\\product-microservices\\product-microservices.csproj",
+      "projectUniqueName": "/home/matteog/Documents/MuguetDiscount/back/api/product-microservices/product-microservices.csproj",
       "projectName": "product-microservices",
-      "projectPath": "C:\\Users\\lewis\\Documents\\GitHub\\MuguetDiscount\\back\\api\\product-microservices\\product-microservices.csproj",
-      "packagesPath": "C:\\Users\\lewis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lewis\\Documents\\GitHub\\MuguetDiscount\\back\\api\\product-microservices\\obj\\",
+      "projectPath": "/home/matteog/Documents/MuguetDiscount/back/api/product-microservices/product-microservices.csproj",
+      "packagesPath": "/home/matteog/.nuget/packages/",
+      "outputPath": "/home/matteog/Documents/MuguetDiscount/back/api/product-microservices/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lewis\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/home/matteog/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1529,7 +1516,7 @@
             "version": "[7.0.4, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "include": "Runtime, Build, Native, ContentFiles, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.13, )"
@@ -1554,6 +1541,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1562,7 +1563,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }
