@@ -1475,19 +1475,19 @@
     ]
   },
   "packageFolders": {
-    "/home/matteog/.nuget/packages/": {}
+    "C:\\Users\\matte\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/matteog/Documents/MuguetDiscount/back/api/command-microservices/command-microservices.csproj",
+      "projectUniqueName": "C:\\Users\\matte\\Documents\\MuguetDiscount\\back\\api\\command-microservices\\command-microservices.csproj",
       "projectName": "command-microservices",
-      "projectPath": "/home/matteog/Documents/MuguetDiscount/back/api/command-microservices/command-microservices.csproj",
-      "packagesPath": "/home/matteog/.nuget/packages/",
-      "outputPath": "/home/matteog/Documents/MuguetDiscount/back/api/command-microservices/obj/",
+      "projectPath": "C:\\Users\\matte\\Documents\\MuguetDiscount\\back\\api\\command-microservices\\command-microservices.csproj",
+      "packagesPath": "C:\\Users\\matte\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\matte\\Documents\\MuguetDiscount\\back\\api\\command-microservices\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/matteog/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\matte\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -1549,7 +1549,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.113/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
