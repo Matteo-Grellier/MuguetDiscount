@@ -9,9 +9,18 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<CommandDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("postgresConnection")));
+builder.Services.AddDbContext<CommandDbContext>(options => 
+    options.UseNpgsql(builder.Configuration.GetConnectionString("postgresConnection"))
+    // x=>x.MigrationsHistoryTable("_EfMigrations", Configuration.GetSection("Schema").GetSection("<YourDataSchema>").Value)));
+);
 
 var app = builder.Build();
+
+using (var serviceScope = app.Services.CreateScope())
+{
+    var dbContext = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    dbContext.Database.Migrate();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
