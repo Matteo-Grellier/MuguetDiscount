@@ -18,7 +18,7 @@ var app = builder.Build();
 
 using (var serviceScope = app.Services.CreateScope())
 {
-    var dbContext = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    var dbContext = serviceScope.ServiceProvider.GetRequiredService<CommandDbContext>();
     dbContext.Database.Migrate();
 }
 

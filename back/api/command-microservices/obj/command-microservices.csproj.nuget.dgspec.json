@@ -1,25 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matte\\Documents\\MuguetDiscount\\back\\api\\command-microservices\\command-microservices.csproj": {}
+    "C:\\Users\\lewis\\Documents\\GitHub\\MuguetDiscount\\back\\api\\command-microservices\\command-microservices.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matte\\Documents\\MuguetDiscount\\back\\api\\command-microservices\\command-microservices.csproj": {
+    "C:\\Users\\lewis\\Documents\\GitHub\\MuguetDiscount\\back\\api\\command-microservices\\command-microservices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matte\\Documents\\MuguetDiscount\\back\\api\\command-microservices\\command-microservices.csproj",
+        "projectUniqueName": "C:\\Users\\lewis\\Documents\\GitHub\\MuguetDiscount\\back\\api\\command-microservices\\command-microservices.csproj",
         "projectName": "command-microservices",
-        "projectPath": "C:\\Users\\matte\\Documents\\MuguetDiscount\\back\\api\\command-microservices\\command-microservices.csproj",
-        "packagesPath": "C:\\Users\\matte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matte\\Documents\\MuguetDiscount\\back\\api\\command-microservices\\obj\\",
+        "projectPath": "C:\\Users\\lewis\\Documents\\GitHub\\MuguetDiscount\\back\\api\\command-microservices\\command-microservices.csproj",
+        "packagesPath": "C:\\Users\\lewis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lewis\\Documents\\GitHub\\MuguetDiscount\\back\\api\\command-microservices\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\matte\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\lewis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -76,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
