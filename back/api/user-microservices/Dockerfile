@@ -1,20 +1,25 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+﻿# https://hub.docker.com/_/microsoft-dotnet
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS base
+WORKDIR /source
+
+# copy csproj and restore as distinct layers
+COPY *.sln /source
+COPY *.csproj /source
+RUN dotnet restore
+
+FROM base as builder
+
+# copy everything else and build app
+COPY . /source
+WORKDIR /source
+RUN ["dotnet", "publish", "-c", "Release", "-o", "/build"]
+
+FROM builder AS publisher
+
+# final stage/image
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
+
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
+COPY --from=publisher /build .
 
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-WORKDIR /src
-COPY ["user-microservices.csproj", "./"]
-RUN dotnet restore "user-microservices.csproj"
-COPY . .
-WORKDIR "/src/"
-RUN dotnet build "user-microservices.csproj" -c Release -o /app/build
-
-FROM build AS publish
-RUN dotnet publish "user-microservices.csproj" -c Release -o /app/publish /p:UseAppHost=false
-
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "user-microservices.dll"]
+CMD ["dotnet", "user-microservices.dll"]

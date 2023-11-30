@@ -1475,19 +1475,19 @@
     ]
   },
   "packageFolders": {
-    "/home/matteog/.nuget/packages/": {}
+    "C:\\Users\\matte\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/matteog/Documents/MuguetDiscount/back/api/product-microservices/product-microservices.csproj",
+      "projectUniqueName": "C:\\Users\\matte\\Documents\\MuguetDiscount\\back\\api\\product-microservices\\product-microservices.csproj",
       "projectName": "product-microservices",
-      "projectPath": "/home/matteog/Documents/MuguetDiscount/back/api/product-microservices/product-microservices.csproj",
-      "packagesPath": "/home/matteog/.nuget/packages/",
-      "outputPath": "/home/matteog/Documents/MuguetDiscount/back/api/product-microservices/obj/",
+      "projectPath": "C:\\Users\\matte\\Documents\\MuguetDiscount\\back\\api\\product-microservices\\product-microservices.csproj",
+      "packagesPath": "C:\\Users\\matte\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\matte\\Documents\\MuguetDiscount\\back\\api\\product-microservices\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/matteog/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\matte\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -1541,20 +1541,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[7.0.14, 7.0.14]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1563,7 +1549,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

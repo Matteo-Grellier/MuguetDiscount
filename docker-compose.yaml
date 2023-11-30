@@ -42,11 +42,17 @@ services:
       dockerfile: Dockerfile
     ports:
       - "4000:5000"
-  # apiuser:
-  #   ports:
-  #     - '4001:5000'
-  #   expose:
-  #     - '4003'
+    depends_on:
+      dbcommands:
+        condition: service_started
+        restart: true
+    command: ["dotnet", "ef", "database update"]
+  apiuser:
+    build:
+      context: ./back/api/user-microservices
+      dockerfile: Dockerfile
+    ports:
+       - '4001:5000'
   busmailer:
     image: rabbitmq:3-management
     ports :
