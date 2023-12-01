@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("command-microservices")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8934c59885e4cff42a0fd2ee966ab9c063270b1c")]
 [assembly: System.Reflection.AssemblyProductAttribute("command-microservices")]
 [assembly: System.Reflection.AssemblyTitleAttribute("command-microservices")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

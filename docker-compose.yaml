@@ -1,11 +1,11 @@
-version: '3.4'
+version: "3.4"
 services:
   front:
     build:
       context: ./front/mainfront
       dockerfile: ./Dockerfile
     ports:
-      - '3000:3000'
+      - "3000:3000"
     stdin_open: true
     tty: true
   frontsso:
@@ -13,7 +13,7 @@ services:
       context: ./front/frontsso
       dockerfile: ./Dockerfile
     ports:
-      - '3001:3000'
+      - "3001:3000"
     stdin_open: true
     tty: true
   dbuser:
@@ -33,37 +33,45 @@ services:
       POSTGRES_USER: command
       POSTGRES_PASSWORD: command
     ports:
-      - "5001:5432"
+      - "5432:5432"
     volumes:
       - ./back/data:/var/lib/postresql/data
+    networks:
+      - mynet
   apicommands:
     build:
       context: ./back/api/command-microservices
       dockerfile: Dockerfile
     ports:
-      - "4000:5000"
-    depends_on:
-      dbcommands:
-        condition: service_started
-        restart: true
-    command: ["dotnet", "ef", "database update"]
+      - "5000:5000"
+#    depends_on:
+#      dbcommands:
+#        condition: service_started
+#        restart: true
+    networks:
+      - mynet
+    links:
+      - dbcommands
   apiuser:
     build:
       context: ./back/api/user-microservices
       dockerfile: Dockerfile
     ports:
-       - '4001:5000'
+      - "4001:5000"
   busmailer:
     image: rabbitmq:3-management
-    ports :
-      - '6000:5672'
+    ports:
+      - "6000:5672"
     expose:
-    - '4004'
+      - "4004"
   mailer:
     image: catatnight/postfix
-    ports :
-      - '6001:587'
+    ports:
+      - "6001:587"
     expose:
-      - '4014'
+      - "4014"
 volumes:
   pgdata:
+networks:
+  mynet:
+    driver: bridge

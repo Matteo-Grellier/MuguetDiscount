@@ -13,10 +13,6 @@ FROM base as builder
 COPY . /source
 WORKDIR /source
 RUN ["dotnet", "publish", "-c", "Release", "-o", "/build"]
-RUN dotnet tool install dotnet-ef --global --version 7.0.0
-ENV PATH="$PATH:/root/.dotnet/tools"
-RUN dotnet ef database migrate info
-RUN dotnet ef database update
 
 FROM builder AS publisher
 
