@@ -11,7 +11,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CommandDbContext>(options => 
     options.UseNpgsql(builder.Configuration.GetConnectionString("postgresConnection"))
-    // x=>x.MigrationsHistoryTable("_EfMigrations", Configuration.GetSection("Schema").GetSection("<YourDataSchema>").Value)));
 );
 
 var app = builder.Build();

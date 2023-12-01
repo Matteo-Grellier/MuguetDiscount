@@ -24,7 +24,7 @@ services:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: user
     ports:
-      - "5000:5432"
+      - "5007:5432"
   dbcommands:
     image: postgres
     restart: always
@@ -36,22 +36,14 @@ services:
       - "5432:5432"
     volumes:
       - ./back/data:/var/lib/postresql/data
-    networks:
-      - mynet
   apicommands:
     build:
       context: ./back/api/command-microservices
       dockerfile: Dockerfile
     ports:
       - "5000:5000"
-#    depends_on:
-#      dbcommands:
-#        condition: service_started
-#        restart: true
-    networks:
-      - mynet
-    links:
-      - dbcommands
+    depends_on:
+      - "dbcommands"
   apiuser:
     build:
       context: ./back/api/user-microservices
@@ -72,6 +64,3 @@ services:
       - "4014"
 volumes:
   pgdata:
-networks:
-  mynet:
-    driver: bridge
