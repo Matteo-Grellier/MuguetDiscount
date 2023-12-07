@@ -8,8 +8,6 @@ const LoginPage = () => {
 	return (
 		<div>
 			<Navbar />
-			<LoginButton />
-			<LogoutButton />
 			<Profile />
 		</div>
 	);

@@ -4,6 +4,7 @@ import '../css/navbar.css';
 import SearchBar from './searchbar';
 import { useNavigate } from "react-router-dom"
 import { useAuth0 } from "@auth0/auth0-react";
+import ProfileBar from './profileBar';
 
 function Navbar() {
 	const { user, isAuthenticated } = useAuth0();
@@ -18,10 +19,7 @@ function Navbar() {
 		let path = "/";
 		navigate(path);
 	}
-	function redirectToLoginPage() {
-		let path = "/login";
-		navigate(path);
-	}
+
 	if (isAuthenticated) {
 		userIcon = user.picture;
 	}
@@ -41,14 +39,18 @@ function Navbar() {
 				<div className='cart' onClick={click}>
 
 				</div>
-				<div className='login' onClick={redirectToLoginPage}>
+				<div className='login' >
 					{isAuthenticated ?
 						< img src={userIcon} alt='' style={{ objectFit: 'cover', borderRadius: '40px', overflow: 'hidden' }} />
 						:
 						< img alt='no icon' style={{ color: 'black' }} />
 					}
+
 				</div>
+				<ProfileBar />
+
 			</div>
+
 		</nav >
 	);
 }

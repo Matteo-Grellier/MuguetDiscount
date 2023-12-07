@@ -1,3 +1,19 @@
+@media (max-aspect-ratio: 1/1) {
+	.search-input {
+		width: 20%;
+	}
+}
+@media (max-aspect-ratio: 3/2) {
+	.search-input {
+		width: 60%;
+	}
+}
+@media (max-aspect-ratio: 8/5) {
+	.search-input {
+		width: 100%;
+	}
+}
+
 /* Search bar container */
 .search-container {
 	display: flex;
@@ -12,7 +28,6 @@
 	border: none;
 	border-radius: 40px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-	width: 1160px;
 	height: 30px;
 	font-size: 16px;
 	font-size: 20px;

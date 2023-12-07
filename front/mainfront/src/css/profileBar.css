@@ -1,0 +1,15 @@
+.ProfileBarContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.ProfileBarContainer .Profile {
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.ProfileBarContainer .Login {
+	cursor: pointer;
+}

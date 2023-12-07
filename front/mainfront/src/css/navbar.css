@@ -8,7 +8,38 @@
 	align-items: center;
 	background-color: #85e39f;
 	color: #fff;
-	padding: 10px;
+}
+@media (max-aspect-ratio: 1/1) {
+	.navbar {
+		width: 20%;
+	}
+	.centerContainer {
+		width: 70%;
+	}
+}
+@media (max-aspect-ratio: 3/2) {
+	.navbar {
+		width: 60%;
+	}
+	.centerContainer {
+		width: 40%;
+	}
+}
+@media (max-aspect-ratio: 8/5) {
+	.navbar {
+		width: 100%;
+	}
+	.centerContainer {
+		width: 40%;
+	}
+}
+@media (max-aspect-ratio: 9/5) {
+	.navbar {
+		width: 100%;
+	}
+	.centerContainer {
+		width: 70%;
+	}
 }
 
 .icon {
@@ -72,6 +103,8 @@
 .rightContainer {
 	display: flex;
 	margin-bottom: 75px;
+	margin-top: 20px;
+	margin-right: 10px;
 }
 
 .cart {
@@ -95,9 +128,11 @@
 	background-color: white;
 	border-radius: 100%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 .login:hover {
-	cursor: pointer;
+}
+.login img {
 }
