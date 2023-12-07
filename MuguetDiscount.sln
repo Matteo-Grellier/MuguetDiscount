@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "back", "back", "{BD03D069-AAC5-45A1-AF61-65EAABD82375}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{3155DA64-7B2D-489E-B65E-60A6C1DB1159}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "product-microservices", "back\api\product-microservices\product-microservices.csproj", "{9355409B-4244-485C-8163-75A3437BEB88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9355409B-4244-485C-8163-75A3437BEB88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9355409B-4244-485C-8163-75A3437BEB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9355409B-4244-485C-8163-75A3437BEB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9355409B-4244-485C-8163-75A3437BEB88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3155DA64-7B2D-489E-B65E-60A6C1DB1159} = {BD03D069-AAC5-45A1-AF61-65EAABD82375}
+		{9355409B-4244-485C-8163-75A3437BEB88} = {3155DA64-7B2D-489E-B65E-60A6C1DB1159}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {863CC610-6798-4C49-A877-6970C22A489F}
+	EndGlobalSection
+EndGlobal
