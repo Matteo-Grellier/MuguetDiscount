@@ -1,0 +1,138 @@
+/* FILEPATH: /home/matteog/Documents/MuguetDiscount/front/mainfront/src/css/navbar.css */
+
+/* Navbar container */
+.navbar {
+	height: 147px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #85e39f;
+	color: #fff;
+}
+@media (max-aspect-ratio: 1/1) {
+	.navbar {
+		width: 20%;
+	}
+	.centerContainer {
+		width: 70%;
+	}
+}
+@media (max-aspect-ratio: 3/2) {
+	.navbar {
+		width: 60%;
+	}
+	.centerContainer {
+		width: 40%;
+	}
+}
+@media (max-aspect-ratio: 8/5) {
+	.navbar {
+		width: 100%;
+	}
+	.centerContainer {
+		width: 40%;
+	}
+}
+@media (max-aspect-ratio: 9/5) {
+	.navbar {
+		width: 100%;
+	}
+	.centerContainer {
+		width: 70%;
+	}
+}
+
+.icon {
+	width: 100px;
+	height: 100px;
+	margin-left: 20px;
+	fill: #fff;
+	border-color: #fff;
+	background-color: white;
+	border-radius: 100%;
+}
+
+.icon:hover {
+	cursor: pointer;
+}
+
+.centerContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.categories {
+	display: flex;
+	margin-top: 20px;
+	margin-right: 20px;
+	justify-content: center;
+}
+.categories a {
+	margin-right: 30px;
+	font-size: 30px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #4a6e88;
+}
+
+.hover-underline-animation {
+	position: relative;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.hover-underline-animation::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #4a6e88;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+	transform: scaleX(0);
+}
+
+.hover-underline-animation:hover::after {
+	transform-origin: bottom left;
+	transform: scaleX(1);
+}
+
+.rightContainer {
+	display: flex;
+	margin-bottom: 75px;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+.cart {
+	width: 75px;
+	height: 75px;
+	fill: #fff;
+	border-color: #fff;
+	background-color: white;
+	border-radius: 100%;
+}
+.cart:hover {
+	cursor: pointer;
+}
+
+.login {
+	margin-left: 20px;
+	width: 75px;
+	height: 75px;
+	fill: #fff;
+	border-color: #fff;
+	background-color: white;
+	border-radius: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.login:hover {
+}
+.login img {
+}
