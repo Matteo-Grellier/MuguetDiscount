@@ -22,4 +22,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
 COPY --from=publisher /build .
 
+EXPOSE 80
+
 CMD ["dotnet", "command-microservices.dll"]
