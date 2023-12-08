@@ -1,15 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace product_microservices
+public class ProductDbContext : DbContext
 {
-    public class ProductdbContext : DbContext
-    {
-        public ProductdbContext(DbContextOptions<ProductdbContext> options) :base(options)
-        { 
-        
+    public ProductDbContext(DbContextOptions<ProductDbContext> options) : base(options) { }
 
-        } 
-
-        public virtual DbSet<Product> Products { get; set; }
-    }
+    public DbSet<Product> Products { get; set; }
 }

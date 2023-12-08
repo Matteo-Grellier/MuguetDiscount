@@ -1,10 +1,8 @@
-﻿using System;
-using System.Numerics;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace product_microservices.Migrations
+namespace productmicroservices.Migrations
 {
     /// <inheritdoc />
     public partial class ProductV1 : Migration
@@ -16,10 +14,12 @@ namespace product_microservices.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    ID = table.Column<BigInteger>(type: "numeric", nullable: false),
-                    UserID = table.Column<BigInteger>(type: "numeric", nullable: false),
-                    TotalPrice = table.Column<int>(type: "integer", nullable: false),
-                    Date = table.Column<DateOnly>(type: "date", nullable: false)
+                    ID = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Price = table.Column<float>(type: "real", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
+                    Category = table.Column<string>(type: "text", nullable: false),
+                    Seller = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
