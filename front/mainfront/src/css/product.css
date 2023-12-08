@@ -5,9 +5,14 @@
 }
 
 .productsContainer div {
-	background-color: #85e39f;
+	background-color: #efefef;
+	box-shadow: 4px 4px 15px -5px rgba(12, 12, 12, 0.55);
 	margin-top: 40px;
 	margin-left: 70px;
 	padding: 10px;
-	border-radius: 30px;
+	border-radius: 20px;
+}
+
+img {
+	width: 300px;
 }

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-var  MyAllowSpecificOrigins = "http//localhost:3000";
+var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,7 +36,7 @@ using (var serviceScope = app.Services.CreateScope())
 // }
 
 app.UseHttpsRedirection();
-app.UseCors();
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
 

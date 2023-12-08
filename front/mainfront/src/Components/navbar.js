@@ -27,7 +27,7 @@ function Navbar() {
 	return (
 		<nav className="navbar">
 			<div className='icon' onClick={redirectToHome}>
-
+				<img alt='Logo' src='logo_4.png' />
 			</div>
 			<div className='centerContainer'>
 				<div className='searchbar'>

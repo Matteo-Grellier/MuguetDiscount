@@ -6,7 +6,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #85e39f;
+	background-color: #83c896;
 	color: #fff;
 }
 @media (max-aspect-ratio: 1/1) {
@@ -38,7 +38,7 @@
 		width: 100%;
 	}
 	.centerContainer {
-		width: 70%;
+		width: 60%;
 	}
 }
 
@@ -46,10 +46,12 @@
 	width: 100px;
 	height: 100px;
 	margin-left: 20px;
-	fill: #fff;
 	border-color: #fff;
-	background-color: white;
 	border-radius: 100%;
+}
+
+.icon img {
+	width: 110px;
 }
 
 .icon:hover {
@@ -104,16 +106,17 @@
 	display: flex;
 	margin-bottom: 75px;
 	margin-top: 20px;
-	margin-right: 10px;
+	margin-right: 30px;
 }
 
 .cart {
-	width: 75px;
-	height: 75px;
+	width: 60px;
+	height: 60px;
 	fill: #fff;
 	border-color: #fff;
 	background-color: white;
 	border-radius: 100%;
+	margin-right: -10px;
 }
 .cart:hover {
 	cursor: pointer;
@@ -121,8 +124,9 @@
 
 .login {
 	margin-left: 20px;
-	width: 75px;
-	height: 75px;
+	margin-right: 20px;
+	width: 60px;
+	height: 60px;
 	fill: #fff;
 	border-color: #fff;
 	background-color: white;
@@ -135,4 +139,5 @@
 .login:hover {
 }
 .login img {
+	width: 60px;
 }
