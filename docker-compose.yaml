@@ -61,7 +61,7 @@ services:
     ports:
       - "5001:80"
     depends_on:
-      - "dbcommands"
+      - "dbproducts"
   apiuser:
     build:
       context: ./back/api/user-microservices
