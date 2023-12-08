@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
+
 [ApiController]
 [Route("api/[controller]")]
 public class ProductController : ControllerBase
@@ -59,10 +60,10 @@ public class ProductController : ControllerBase
     public IActionResult Put([FromBody] Product model)
     {
         _products.Products.Attach(model);
-        _products.Entry(model).State = EntityState.Modified;        
+        _products.Entry(model).State = EntityState.Modified;
 
         _products.SaveChanges();
-                    
+
         return Ok(new { Message = "Product updated" });
     }
 
@@ -70,7 +71,7 @@ public class ProductController : ControllerBase
     [HttpDelete("{id}")]
     public IActionResult Delete(string id)
     {
-        var product = GetById(id);               
+        var product = GetById(id);
 
         _products.Products.Remove(product);
         _products.SaveChanges();
