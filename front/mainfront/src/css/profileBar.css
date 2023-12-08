@@ -7,9 +7,13 @@
 
 .ProfileBarContainer .Profile {
 	margin-bottom: 20px;
+	text-decoration: underline;
+	margin-bottom: 5px;
 	cursor: pointer;
 }
 
 .ProfileBarContainer .Login {
 	cursor: pointer;
+
+	text-decoration: underline;
 }

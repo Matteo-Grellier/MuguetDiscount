@@ -1,14 +1,16 @@
+using System.ComponentModel.DataAnnotations;
 using System.Numerics;
 using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
-
-namespace product_microservices;
+using Npgsql.Internal.TypeHandlers;
 
 public class Product
 {
-    [Key] public BigInteger ID { get; set; }
-    public BigInteger UserID { get; set; }
-    public int TotalPrice { get; set; }
-    public DateOnly Date { get; set; }
+    [Key] public string ID { get; set; } = String.Empty;
+    public string Name { get; set; } = String.Empty;
+    public float Price { get; set; }
+    public string Picture { get; set; } = String.Empty;
+    public string Description { get; set; } = String.Empty;
+    public string Category { get; set; } = String.Empty;
+    public string Seller { get; set; } = String.Empty;
 }
